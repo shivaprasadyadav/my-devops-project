@@ -1,91 +1,143 @@
-# 🚀 DevOps Project: Deploying Application on AWS EC2 using Docker
+# 🍔 Food Ordering Web App (DevOps Project)
 
-## 📌 Project Overview
-This project demonstrates how to deploy an application from GitHub to AWS EC2 using Docker.  
-It follows a real-world DevOps workflow including version control, containerization, and deployment.
+A simple and visually appealing **Food Ordering Web Application** built using HTML, CSS, and JavaScript, and deployed using **Docker + Nginx on AWS EC2**.
 
----
-
-## 🧠 Tech Stack
-- AWS EC2 (Amazon Linux 2023)
-- Docker
-- Git & GitHub
-- Linux
-- (Optional) Nginx / GitHub Actions
+This project demonstrates a complete **DevOps workflow** from development to deployment.
 
 ---
 
-## 🏗️ Architecture
-GitHub Repository → AWS EC2 → Docker Container → Application Running on Browser
+## 🚀 Features
+
+* 🍕 Interactive food menu (Burger, Pizza, Pasta)
+* 🖼️ Attractive UI with images
+* 🛒 Order button with instant feedback
+* 📱 Responsive layout (basic)
+* 🐳 Dockerized for easy deployment
 
 ---
 
-## ⚙️ Setup & Installation
+## 🛠️ Tech Stack
 
-### 1. Launch EC2 Instance
-- Instance Type: t2.micro / t3.micro (Free Tier)
-- OS: Amazon Linux 2023
-- Open Ports: 22, 80
-
----
-
-### 2. Connect to EC2
-bash ssh -i your-key.pem ec2-user@your-public-ip 
+* **Frontend:** HTML, CSS, JavaScript
+* **Web Server:** Nginx
+* **Containerization:** Docker
+* **Cloud:** AWS EC2
+* **Version Control:** Git & GitHub
 
 ---
 
-### 3. Install Dependencies
-bash sudo dnf update -y sudo dnf install git docker -y sudo systemctl start docker sudo systemctl enable docker sudo usermod -aG docker ec2-user 
+## 📁 Project Structure
+
+```
+food-ordering-site/
+ ├── index.html
+ ├── style.css
+ ├── script.js
+ └── images/
+      ├── burger.jpg
+      ├── pizza.jpg
+      ├── pasta.jpg
+```
 
 ---
 
-### 4. Clone Repository
-bash git clone https://github.com/your-username/your-repo.git cd your-repo 
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd food-ordering-site
+```
 
 ---
 
-### 5. Build Docker Image
-bash docker build -t my-app . 
+### 2️⃣ Build Docker Image
+
+```bash
+docker build -t food-app .
+```
 
 ---
 
-### 6. Run Container
-bash docker run -d -p 80:3000 my-app 
+### 3️⃣ Run Docker Container
+
+```bash
+docker run -d -p 80:80 food-app
+```
 
 ---
 
-## 🌐 Access Application
+### 4️⃣ Access Application
+
 Open in browser:
-http://your-ec2-public-ip
+
+```
+http://localhost/
+```
 
 ---
 
-## 🔄 CI/CD (Optional)
-This project can be extended using GitHub Actions to automate deployment whenever code is pushed.
+## 🌐 Deployment (AWS EC2)
+
+1. Launch EC2 instance
+2. Install Docker
+3. Clone repository
+4. Build and run container
+5. Open port **80** in security group
+6. Access using:
+
+```
+http://<EC2-PUBLIC-IP>/
+```
 
 ---
 
-## 📈 Features
-- Automated deployment using Docker
-- Cloud hosting on AWS EC2
-- Scalable and production-ready structure
-- Easy to integrate CI/CD pipelines
+## 🔄 DevOps Workflow
+
+```
+GitHub → Docker Build → Container Run → EC2 Deployment
+```
 
 ---
 
-## 💡 Future Improvements
-- Add Nginx reverse proxy
-- Enable HTTPS using SSL
-- Implement GitHub Actions CI/CD pipeline
-- Use Kubernetes for orchestration
+## 📸 Screenshots
+
+*Add screenshots here after deployment (recommended for LinkedIn & resume)*
 
 ---
 
-## 📷 Screenshots (Optional)
-(Add your app screenshots here)
+## 🔥 Future Enhancements
+
+* 🛒 Add cart functionality
+* 🧾 Order summary page
+* 🔐 User login system
+* 🗄️ Backend integration (Spring Boot / Node.js)
+* ☁️ CI/CD using Jenkins
 
 ---
 
 ## 👨‍💻 Author
-Your Name  
-GitHub: https://github.com/your-usern
+
+**Shivaprasad Yadav**
+DevOps & Cloud Enthusiast
+
+---
+
+## ⭐ Acknowledgement
+
+Images used from free platforms like Unsplash and Pexels.
+
+---
+
+## 📌 Conclusion
+
+This project is a beginner-friendly demonstration of:
+
+* Web development basics
+* Docker containerization
+* Cloud deployment
+
+Perfect for showcasing **DevOps skills** in interviews and on LinkedIn 🚀
+
+---
